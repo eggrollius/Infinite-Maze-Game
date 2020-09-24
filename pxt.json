@@ -1,5 +1,5 @@
 {
-    "name": "Maze Game Proper",
+    "name": "Infinite Maze Game",
     "description": "",
     "dependencies": {
         "core": "*",

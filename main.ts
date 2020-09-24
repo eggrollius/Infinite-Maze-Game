@@ -20,12 +20,11 @@ input.onButtonPressed(Button.A, function () {
             five = ten
             six = eleven
             seven = twelve
-            eight = thirteen
+            eight = 0
             nine = fourteen
             ten = fifteen
             eleven = sixteen
             twelve = seventeen
-            thirteen = eighteen
             fourteen = nineteen
             fifteen = twenty
             sixteen = twentyone
@@ -78,6 +77,100 @@ input.onButtonPressed(Button.A, function () {
             twelve = eleven
             seventeen = sixteen
             twenty_two = twentyone
+            if (randint(0, 10) == 0) {
+                one = 0
+                six = 0
+                eleven = 0
+                if (randint(0, 10) == 0) {
+                    sixteen = 0
+                    twentyone = 0
+                } else {
+                    sixteen = 1
+                    twentyone = 1
+                }
+            } else {
+                one = 1
+                six = 1
+                eleven = 0
+                if (randint(0, 10) == 0) {
+                    sixteen = 0
+                    twentyone = 0
+                } else {
+                    sixteen = 1
+                    twentyone = 1
+                }
+            }
+        }
+    }
+})
+input.onButtonPressed(Button.B, function () {
+    if (northSouth == 1) {
+        if (eight == 0) {
+            twentyfive = twenty
+            twentyfour = nineteen
+            twentythree = eighteen
+            twenty_two = seventeen
+            twentyone = sixteen
+            twenty = fifteen
+            nineteen = fourteen
+            eighteen = 0
+            seventeen = twelve
+            sixteen = eleven
+            fifteen = ten
+            fourteen = nine
+            twelve = seven
+            eleven = six
+            ten = five
+            nine = four
+            eight = three
+            seven = two
+            six = one
+            if (randint(0, 10) == 0) {
+                one = 0
+                two = 0
+                three = 0
+                if (randint(0, 10) == 0) {
+                    four = 0
+                    five = 0
+                } else {
+                    four = 1
+                    five = 1
+                }
+            } else {
+                one = 1
+                two = 1
+                three = 0
+                if (randint(0, 10) == 0) {
+                    four = 0
+                    five = 0
+                } else {
+                    four = 1
+                    five = 1
+                }
+            }
+        }
+    } else {
+        if (fourteen == 0) {
+            twentyone = twenty_two
+            sixteen = seventeen
+            eleven = twelve
+            six = seven
+            one = two
+            twenty_two = twentythree
+            seventeen = eighteen
+            twelve = 0
+            seven = eight
+            two = three
+            twentythree = twentyfour
+            eighteen = nineteen
+            thirteen = fourteen
+            eight = nine
+            three = four
+            twentyfour = twentyfive
+            nineteen = twenty
+            fourteen = fifteen
+            nine = ten
+            five = six
             if (randint(0, 10) == 0) {
                 one = 0
                 six = 0
