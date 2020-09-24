@@ -1,16 +1,18 @@
-input.onPinPressed(TouchPin.P0, function () {
-    if (northSouth == 1) {
+def on_pin_pressed_p0():
+    global northSouth, eastwest
+    if northSouth == 1:
         northSouth = 0
         eastwest = 1
-    } else if (eastwest == 1) {
+    elif eastwest == 1:
         eastwest = 0
         northSouth = 1
-    }
     basic.pause(100)
-})
-input.onButtonPressed(Button.A, function () {
-    if (northSouth == 1) {
-        if (eighteen == 0) {
+input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+def on_button_pressed_a():
+    global one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone, twenty_two, twentythree, twentyfour, twentyfive
+    if northSouth == 1:
+        if eighteen == 0:
             one = six
             two = seven
             three = eight
@@ -30,31 +32,27 @@ input.onButtonPressed(Button.A, function () {
             eighteen = twentythree
             nineteen = twentyfour
             twenty = twentyfive
-            if (randint(0, 10) == 0 && (sixteen != 0 && seventeen != 0)) {
+            if randint(0, 10) == 0:
                 twentyone = 0
                 twenty_two = 0
                 twentythree = 0
-                if (randint(0, 10) == 0) {
+                if randint(0, 10) == 0:
                     twentyfour = 0
                     twentyfive = 0
-                } else {
+                else:
                     twentyfour = 1
                     twentyfive = 1
-                }
-            } else {
+            else:
                 twentyone = 1
                 twenty_two = 1
                 twentythree = 0
-                if (randint(0, 10) == 0 && (nineteen != 0 && twenty != 0)) {
+                if randint(0, 10) == 0:
                     twentyfour = 0
                     twentyfive = 0
-                } else {
+                else:
                     twentyfour = 1
                     twentyfive = 1
-                }
-            }
-        }
-    } else if (twelve == 0) {
+    elif twelve == 0:
         five = four
         ten = nine
         fifteen = fourteen
@@ -74,34 +72,32 @@ input.onButtonPressed(Button.A, function () {
         twelve = eleven
         seventeen = sixteen
         twenty_two = twentyone
-        if (randint(0, 10) == 0) {
+        if randint(0, 10) == 0:
             one = 0
             six = 0
             eleven = 0
-            if (randint(0, 10) == 0) {
+            if randint(0, 10) == 0:
                 sixteen = 0
                 twentyone = 0
-            } else {
+            else:
                 sixteen = 1
                 twentyone = 1
-            }
-        } else {
+        else:
             one = 1
             six = 1
             eleven = 0
-            if (randint(0, 10) == 0) {
+            if randint(0, 10) == 0:
                 sixteen = 0
                 twentyone = 0
-            } else {
+            else:
                 sixteen = 1
                 twentyone = 1
-            }
-        }
-    }
-})
-input.onButtonPressed(Button.B, function () {
-    if (northSouth == 1) {
-        if (eight == 0) {
+input.on_button_pressed(Button.A, on_button_pressed_a)
+
+def on_button_pressed_b():
+    global twentyfive, twentyfour, twentythree, twenty_two, twentyone, twenty, nineteen, eighteen, seventeen, sixteen, fifteen, fourteen, twelve, eleven, ten, nine, eight, seven, six, one, two, three, four, five, thirteen
+    if northSouth == 1:
+        if eight == 0:
             twentyfive = twenty
             twentyfour = nineteen
             twentythree = eighteen
@@ -121,31 +117,27 @@ input.onButtonPressed(Button.B, function () {
             eight = three
             seven = two
             six = one
-            if (randint(0, 10) == 0 && (nine != 0 && ten != 0)) {
+            if randint(0, 10) == 0:
                 one = 0
                 two = 0
                 three = 0
-                if (randint(0, 10) == 0) {
+                if randint(0, 10) == 0:
                     four = 0
                     five = 0
-                } else {
+                else:
                     four = 1
                     five = 1
-                }
-            } else {
+            else:
                 one = 1
                 two = 1
                 three = 0
-                if (randint(0, 10) == 0 && (six != 0 && seven != 0)) {
+                if randint(0, 10) == 0:
                     four = 0
                     five = 0
-                } else {
+                else:
                     four = 1
                     five = 1
-                }
-            }
-        }
-    } else if (fourteen == 0) {
+    elif fourteen == 0:
         twentyone = twenty_two
         sixteen = seventeen
         eleven = twelve
@@ -166,58 +158,55 @@ input.onButtonPressed(Button.B, function () {
         fourteen = fifteen
         nine = ten
         five = six
-        if (randint(0, 10) == 0) {
+        if randint(0, 10) == 0:
             one = 0
             six = 0
             eleven = 0
-            if (randint(0, 10) == 0) {
+            if randint(0, 10) == 0:
                 sixteen = 0
                 twentyone = 0
-            } else {
+            else:
                 sixteen = 1
                 twentyone = 1
-            }
-        } else {
+        else:
             one = 1
             six = 1
             eleven = 0
-            if (randint(0, 10) == 0) {
+            if randint(0, 10) == 0:
                 sixteen = 0
                 twentyone = 0
-            } else {
+            else:
                 sixteen = 1
                 twentyone = 1
-            }
-        }
-    }
-})
-let twentyfive = 0
-let twentyfour = 0
-let twentythree = 0
-let twenty_two = 0
-let twentyone = 0
-let twenty = 0
-let nineteen = 0
-let eighteen = 0
-let seventeen = 0
-let sixteen = 0
-let fifteen = 0
-let fourteen = 0
-let thirteen = 0
-let twelve = 0
-let eleven = 0
-let ten = 0
-let nine = 0
-let eight = 0
-let seven = 0
-let six = 0
-let five = 0
-let four = 0
-let three = 0
-let two = 0
-let one = 0
-let northSouth = 0
-let eastwest = 0
+input.on_button_pressed(Button.B, on_button_pressed_b)
+
+twentyfive = 0
+twentyfour = 0
+twentythree = 0
+twenty_two = 0
+twentyone = 0
+twenty = 0
+nineteen = 0
+eighteen = 0
+seventeen = 0
+sixteen = 0
+fifteen = 0
+fourteen = 0
+thirteen = 0
+twelve = 0
+eleven = 0
+ten = 0
+nine = 0
+eight = 0
+seven = 0
+six = 0
+five = 0
+four = 0
+three = 0
+two = 0
+one = 0
+northSouth = 0
+eastwest = 0
 eastwest = 0
 northSouth = 1
 one = 1
@@ -245,7 +234,8 @@ twenty_two = 1
 twentythree = 0
 twentyfour = 1
 twentyfive = 1
-basic.forever(function () {
+
+def on_forever():
     led.unplot(0, 0)
     led.unplot(1, 0)
     led.unplot(2, 0)
@@ -271,77 +261,53 @@ basic.forever(function () {
     led.unplot(2, 4)
     led.unplot(3, 4)
     led.unplot(4, 4)
-    if (one == 1) {
+    if one == 1:
         led.plot(0, 0)
-    }
-    if (two == 1) {
+    if two == 1:
         led.plot(1, 0)
-    }
-    if (three == 1) {
+    if three == 1:
         led.plot(2, 0)
-    }
-    if (four == 1) {
+    if four == 1:
         led.plot(3, 0)
-    }
-    if (five == 1) {
+    if five == 1:
         led.plot(4, 0)
-    }
-    if (six == 1) {
+    if six == 1:
         led.plot(0, 1)
-    }
-    if (seven == 1) {
+    if seven == 1:
         led.plot(1, 1)
-    }
-    if (eight == 1) {
+    if eight == 1:
         led.plot(2, 1)
-    }
-    if (nine == 1) {
+    if nine == 1:
         led.plot(3, 1)
-    }
-    if (ten == 1) {
+    if ten == 1:
         led.plot(4, 1)
-    }
-    if (eleven == 1) {
+    if eleven == 1:
         led.plot(0, 2)
-    }
-    if (twelve == 1) {
+    if twelve == 1:
         led.plot(1, 2)
-    }
-    led.plotBrightness(2, 2, 1)
-    if (fourteen == 1) {
+    led.plot_brightness(2, 2, 1)
+    if fourteen == 1:
         led.plot(3, 2)
-    }
-    if (fifteen == 1) {
+    if fifteen == 1:
         led.plot(4, 2)
-    }
-    if (sixteen == 1) {
+    if sixteen == 1:
         led.plot(0, 3)
-    }
-    if (seventeen == 1) {
+    if seventeen == 1:
         led.plot(1, 3)
-    }
-    if (eighteen == 1) {
+    if eighteen == 1:
         led.plot(2, 3)
-    }
-    if (nineteen == 1) {
+    if nineteen == 1:
         led.plot(3, 3)
-    }
-    if (twenty == 1) {
+    if twenty == 1:
         led.plot(4, 3)
-    }
-    if (twentyone == 1) {
+    if twentyone == 1:
         led.plot(0, 4)
-    }
-    if (twenty_two == 1) {
+    if twenty_two == 1:
         led.plot(1, 4)
-    }
-    if (twentythree == 1) {
+    if twentythree == 1:
         led.plot(2, 4)
-    }
-    if (twentyfour == 1) {
+    if twentyfour == 1:
         led.plot(3, 4)
-    }
-    if (twentyfive == 1) {
+    if twentyfive == 1:
         led.plot(4, 4)
-    }
-})
+basic.forever(on_forever)
