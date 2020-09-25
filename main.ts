@@ -30,11 +30,11 @@ input.onButtonPressed(Button.A, function () {
             eighteen = twentythree
             nineteen = twentyfour
             twenty = twentyfive
-            if (randint(0, 10) == 0 && (sixteen != 0 && seventeen != 0)) {
+            if (randint(0, 8) == 0 && (sixteen != 0 && seventeen != 0)) {
                 twentyone = 0
                 twenty_two = 0
                 twentythree = 0
-                if (randint(0, 10) == 0) {
+                if (randint(0, 8) == 0) {
                     twentyfour = 0
                     twentyfive = 0
                 } else {
@@ -45,7 +45,7 @@ input.onButtonPressed(Button.A, function () {
                 twentyone = 1
                 twenty_two = 1
                 twentythree = 0
-                if (randint(0, 10) == 0 && (nineteen != 0 && twenty != 0)) {
+                if (randint(0, 8) == 0 && (nineteen != 0 && twenty != 0)) {
                     twentyfour = 0
                     twentyfive = 0
                 } else {
@@ -74,11 +74,11 @@ input.onButtonPressed(Button.A, function () {
         twelve = eleven
         seventeen = sixteen
         twenty_two = twentyone
-        if (randint(0, 10) == 0) {
+        if (randint(0, 8) == 0) {
             one = 0
             six = 0
             eleven = 0
-            if (randint(0, 10) == 0) {
+            if (randint(0, 8) == 0) {
                 sixteen = 0
                 twentyone = 0
             } else {
@@ -89,7 +89,7 @@ input.onButtonPressed(Button.A, function () {
             one = 1
             six = 1
             eleven = 0
-            if (randint(0, 10) == 0) {
+            if (randint(0, 8) == 0) {
                 sixteen = 0
                 twentyone = 0
             } else {
@@ -121,11 +121,11 @@ input.onButtonPressed(Button.B, function () {
             eight = three
             seven = two
             six = one
-            if (randint(0, 10) == 0 && (nine != 0 && ten != 0)) {
+            if (randint(0, 8) == 0 && (nine != 0 && ten != 0)) {
                 one = 0
                 two = 0
                 three = 0
-                if (randint(0, 10) == 0) {
+                if (randint(0, 8) == 0) {
                     four = 0
                     five = 0
                 } else {
@@ -136,7 +136,7 @@ input.onButtonPressed(Button.B, function () {
                 one = 1
                 two = 1
                 three = 0
-                if (randint(0, 10) == 0 && (six != 0 && seven != 0)) {
+                if (randint(0, 8) == 0 && (six != 0 && seven != 0)) {
                     four = 0
                     five = 0
                 } else {
@@ -165,12 +165,11 @@ input.onButtonPressed(Button.B, function () {
         nineteen = twenty
         fourteen = fifteen
         nine = ten
-        five = six
-        if (randint(0, 10) == 0) {
+        if (randint(0, 8) == 0 && (five != 0 && ten != 0)) {
             one = 0
             six = 0
             eleven = 0
-            if (randint(0, 10) == 0) {
+            if (randint(0, 8) == 0) {
                 sixteen = 0
                 twentyone = 0
             } else {
@@ -178,15 +177,17 @@ input.onButtonPressed(Button.B, function () {
                 twentyone = 1
             }
         } else {
-            one = 1
-            six = 1
-            eleven = 0
-            if (randint(0, 10) == 0) {
-                sixteen = 0
-                twentyone = 0
-            } else {
-                sixteen = 1
-                twentyone = 1
+            if (randint(0, 8) == 0 && (twenty != 0 && twentyfive != 0)) {
+                one = 1
+                six = 1
+                eleven = 0
+                if (randint(0, 8) == 0) {
+                    sixteen = 0
+                    twentyone = 0
+                } else {
+                    sixteen = 1
+                    twentyone = 1
+                }
             }
         }
     }
