@@ -32,11 +32,11 @@ def on_button_pressed_a():
             eighteen = twentythree
             nineteen = twentyfour
             twenty = twentyfive
-            if randint(0, 10) == 0:
+            if randint(0, 8) == 0 and (sixteen != 0 and seventeen != 0):
                 twentyone = 0
                 twenty_two = 0
                 twentythree = 0
-                if randint(0, 10) == 0:
+                if randint(0, 8) == 0:
                     twentyfour = 0
                     twentyfive = 0
                 else:
@@ -46,7 +46,7 @@ def on_button_pressed_a():
                 twentyone = 1
                 twenty_two = 1
                 twentythree = 0
-                if randint(0, 10) == 0:
+                if randint(0, 8) == 0 and (nineteen != 0 and twenty != 0):
                     twentyfour = 0
                     twentyfive = 0
                 else:
@@ -72,11 +72,11 @@ def on_button_pressed_a():
         twelve = eleven
         seventeen = sixteen
         twenty_two = twentyone
-        if randint(0, 10) == 0:
+        if randint(0, 8) == 0:
             one = 0
             six = 0
             eleven = 0
-            if randint(0, 10) == 0:
+            if randint(0, 8) == 0:
                 sixteen = 0
                 twentyone = 0
             else:
@@ -86,7 +86,7 @@ def on_button_pressed_a():
             one = 1
             six = 1
             eleven = 0
-            if randint(0, 10) == 0:
+            if randint(0, 8) == 0:
                 sixteen = 0
                 twentyone = 0
             else:
@@ -95,7 +95,7 @@ def on_button_pressed_a():
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
 def on_button_pressed_b():
-    global twentyfive, twentyfour, twentythree, twenty_two, twentyone, twenty, nineteen, eighteen, seventeen, sixteen, fifteen, fourteen, twelve, eleven, ten, nine, eight, seven, six, one, two, three, four, five, thirteen
+    global twentyfive, twentyfour, twentythree, twenty_two, twentyone, twenty, nineteen, eighteen, seventeen, sixteen, fifteen, fourteen, twelve, eleven, ten, nine, eight, seven, six, one, two, three, four, five
     if northSouth == 1:
         if eight == 0:
             twentyfive = twenty
@@ -117,11 +117,11 @@ def on_button_pressed_b():
             eight = three
             seven = two
             six = one
-            if randint(0, 10) == 0:
+            if randint(0, 8) == 0 and (nine != 0 and ten != 0):
                 one = 0
                 two = 0
                 three = 0
-                if randint(0, 10) == 0:
+                if randint(0, 8) == 0:
                     four = 0
                     five = 0
                 else:
@@ -131,7 +131,7 @@ def on_button_pressed_b():
                 one = 1
                 two = 1
                 three = 0
-                if randint(0, 10) == 0:
+                if randint(0, 8) == 0 and (six != 0 and seven != 0):
                     four = 0
                     five = 0
                 else:
@@ -150,34 +150,33 @@ def on_button_pressed_b():
         two = three
         twentythree = twentyfour
         eighteen = nineteen
-        thirteen = fourteen
         eight = nine
         three = four
         twentyfour = twentyfive
         nineteen = twenty
         fourteen = fifteen
         nine = ten
-        five = six
-        if randint(0, 10) == 0:
-            one = 0
-            six = 0
-            eleven = 0
-            if randint(0, 10) == 0:
-                sixteen = 0
-                twentyone = 0
+        four = five
+        if randint(0, 8) == 0 and (five != 0 and ten != 0):
+            five = 0
+            ten = 0
+            fifteen = 0
+            if randint(0, 8) == 0 and (twenty != 0 and twentyfive != 0):
+                twenty = 0
+                twentyfive = 0
             else:
-                sixteen = 1
-                twentyone = 1
+                twenty = 1
+                twentyfive = 1
         else:
-            one = 1
-            six = 1
-            eleven = 0
-            if randint(0, 10) == 0:
-                sixteen = 0
-                twentyone = 0
+            five = 1
+            ten = 1
+            fifteen = 0
+            if randint(0, 8) == 0 and (twenty != 0 and twentyfive != 0):
+                twenty = 0
+                twentyfive = 0
             else:
-                sixteen = 1
-                twentyone = 1
+                twenty = 1
+                twentyfive = 1
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
 twentyfive = 0
@@ -192,7 +191,6 @@ seventeen = 0
 sixteen = 0
 fifteen = 0
 fourteen = 0
-thirteen = 0
 twelve = 0
 eleven = 0
 ten = 0
